@@ -1,0 +1,831 @@
+:root{
+    --red:#FB3640;
+    --black:#1B1A17;
+    --blue:#0061A8;
+    --white:#F8F5F1; 
+    --yellow:#fdca40; 
+    --magent:#00adb5;  
+}
+/**animacion**/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html, body{
+  height: 90%;
+  font-weight: 800;
+}
+
+body{
+  background: #030321;
+  font-family: Arial;
+}
+
+svg {
+    display:flex;
+    font: 10.5em 'Sick WEB';
+    width: 560px;
+    height: 410px;
+    margin-left:0px 50 px;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #4D163D;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #840037;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #BD0034;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #BD0034;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #FDB731;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+/**animacion**/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box ;
+}
+
+body{
+background:#fff ;
+overflow-x: hidden;
+font-family: 'Nosifer', cursive;
+}
+
+
+
+/**go-top**/
+.go-top{
+    position: fixed;
+    bottom: 100px;
+    right: -100;
+    width: 50px;
+    height:50px;
+    border: 2px solid var(--red);
+    background:#cf0000;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 400ms;
+}
+.go-top:hover{
+    border: 2px solid var(--red);
+    background:#ffcc29;
+}
+
+.go-top:hover span{
+    color: var(--magent);
+}
+
+.go-top > span{
+    font-size: 30px;
+    color: var(--blue);
+}
+
+/**go-top**/
+
+/**skew**/
+.skew-abajo{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 20vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+
+}
+
+.skew-arriba{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 10vh 0 100vw 0 0;
+    border-style: solid;
+    border-color:#fff transparent transparent transparent;
+    z-index: 10;
+
+}
+
+
+
+/**Menu de navegación**/
+#header{
+
+    position: relative;
+    width: 100%;
+}
+.menu{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background:#393e46;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+.menu .logo-box{
+    margin-left: 20px;
+    }
+.menu .logo-box h1 a{
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: 400;
+    color: var(--black);
+}
+.menu .list-container{
+    margin-right: 30px;
+}
+.menu .list-container .list{
+    display: flex;
+}
+.menu .list-container .list li{
+    list-style: none;
+}
+.menu .list-container .list li a{
+    text-decoration: none;
+    margin: 0px 10px;
+    padding: 8px;
+    color: var(--black);
+    border-radius: 24px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.menu .list-container .list li a.activo{
+    background: var(--red);
+    color: #fff;
+}
+.menu .list-container .list li a:hover{
+    background: var(--red);
+    color: #fff;
+}    
+
+.btn-menu > .fa-bars{
+    display: none; 
+}  
+
+/**Menu de navegación**/
+
+/**IMG Header**/
+.img-header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/blood.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.img-header .welcome{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-header .welcome h1{
+    font-size: 50px; 
+    color:#fff;
+    font-weight: 200;
+}
+
+.img-header .welcome hr{
+    width: 400px;
+    height: 2px;
+    background: #fff;
+    border: none;
+    margin-top: 5px;
+}
+
+.img-header .welcome p{
+    font-size: 20px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.img-header .welcome > button{
+    width: 170px;
+    height: 40px;
+    background: var(--red);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.img-header .welcome > button:hover{
+    background: var(--blue);
+
+}
+/**IMG Header**/
+/**Acerca de **/
+
+.acerca-de{
+ position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 120px;
+background: url(../img/luna.jpg);
+background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: 20px;
+}
+
+.acerca-de .info-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.acerca-de .info-container h1{
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.acerca-de .info-container p{
+    text-align: center;
+    font-size: 27px;
+    color: var(--yellow);
+    line-height: 35px;
+    margin: 10px 0px;
+}
+
+.acerca-de .info-container .about-gallery{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+}
+
+.acerca-de .info-container .about-gallery img{
+    width: calc(33.33% - 10px);
+    height: 300px;
+    object-fit: cover;
+    margin: 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.acerca-de .info-container .about-more{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    }
+
+.acerca-de .info-container .about-more button{
+    width: 120px;
+    height: 40px;
+    background: var(--red);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;  
+}
+
+.acerca-de .info-container .about-more button:hover{
+    background: var(--blue);
+    }
+/**Acerca de **/
+
+/**Ref y design**/
+.our-projects{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../img/inside-500.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: 10px;
+ }
+
+ .our-projects .deg-background{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0,0,0,0.7)
+ }
+
+ .our-projects .ejeZproject{
+     position: relative;
+     width: 100%;
+     height: 100%;
+ }
+
+ .our-projects .container-project{
+     width: 90%;
+     margin: auto;
+     padding-top: 100px;
+ }
+
+ .our-projects .container-project .project-title{
+    border: 2px solid #fff;
+    padding: 20px;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+ }
+
+ .our-projects .container-project .project-title h2{
+     font-size: 40px;
+     color: #fff;
+     font-weight: normal;
+ }
+
+ .our-projects .container-project .project-title hr{
+    background:#fff;
+    width: 50%;
+    margin: 10px auto;
+ }
+
+ .our-projects .container-project .project-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    padding-bottom: 100px;
+} 
+
+.our-projects .container-project .project-img img{
+    width: calc(30% - 10px);
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/**Nuestros Eventos**/
+
+/**Testimonios**/
+
+.testimonio{
+    position: relative;
+    width: 100%;
+    margin-top: 100px;
+    background: url(../img/inside-50.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: 10px;
+}
+
+
+.testimonio .testimonio-title{
+    width: 70%;
+    margin:auto;
+    text-align:center;
+}
+
+.testimonio .testimonio-title h2{
+    font-size: 40px;
+    color: var(--white);
+    font-weight:normal;
+    margin-bottom: 10px;
+}
+
+.testimonio .testimonio-title hr{
+    width: 0%;
+    margin:auto;
+    height: 3px;
+    background: var(--white);
+    border:none;
+}
+
+.testimonio .box-testimonio{
+    width: 90%;
+    margin:100px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testimonio .box-testimonio .card-testimonio{
+    width: 60%;
+    margin: 21px;
+}
+
+.testimonio .box-testimonio .card-testimonio .card-img{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.testimonio .box-testimonio .card-testimonio .card-img img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.testimonio .box-testimonio .card-testimonio .testimonio-text{
+    width:100%;
+    border: 2px solid var(--white);
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    background:red;
+    cursor:pointer;
+    transition: 200ms;
+}
+.testimonio .box-testimonio .card-testimonio .testimonio-text h4{
+    color: var(--white);
+    font-weight: normal;
+    font-size: 27px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: 200ms;
+}
+
+.testimonio .box-testimonio .card-testimonio .testimonio-text p{
+    font-size: 19px;
+    color: var(--yellow);
+    text-align: center;
+    line-height: 35px;
+    transition: 200ms;
+}
+
+.testimonio .box-testimonio .card-testimonio .testimonio-text:hover{
+    border:2px solid var(--blue);
+}
+
+.testimonio .box-testimonio .card-testimonio .testimonio-text:hover h4{
+     color: var(--blue);
+}
+/**Testimonios**/
+
+/**footer**/
+
+.footer{
+    position: relative;
+    width: 100%;
+    height: 200%;
+    background: url(../img/desktop.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: 0px;
+}
+
+.footer .deg-footer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.footer .ejeZfooter{
+    position: relative;
+    width: 100%;
+    height: 100%; 
+}
+
+.footer .footer-content{
+    width: 100%;
+    padding-top: 100px;
+    margin: auto;
+}
+
+.footer .footer-content .footer-title{
+    width: 50%;
+    margin: auto;
+    border: 2px solid #fff;
+    padding: 15px;
+}
+
+.footer .footer-content .footer-title h2{
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.footer .footer-content .footer-title hr{
+    width: 80%;
+    margin: auto;
+}
+
+.footer .footer-content .formulario-content{
+    width: 60%;
+    background: #fff;
+    border-radius:124px;
+    border: 2px solid var(--red);
+    margin: 50px auto;
+    padding: 30px;
+    margin-bottom:10px;
+    
+   
+}
+
+.footer .footer-content .formulario-content #formulario{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    
+}
+
+.footer .footer-content .formulario-content #formulario label{
+    text-align: center;
+    color: var(--black);
+    font-size: 25px;
+    margin: 10px 10px 10px 50;
+}
+.footer .footer-content .formulario-content #formulario input{
+    width: 90%;
+    height: 40px;
+    margin: auto;
+    border: 2px solid var(--red);
+    border-radius: 24px;
+    outline: none;
+    text-align: center;
+    font-size: 17px;
+    color: var(--black);
+}
+
+.footer .footer-content .formulario-content #formulario textarea{
+    width: 100%;
+    height: 150px;
+    margin: auto;
+    border: 2px solid var(--red);
+    border-radius: 24px;
+    outline: none;
+    font-size: 15px;
+    color: var(--black);
+    padding: 20px;
+}
+
+.footer .formulario-content .mensaje-form{
+    margin: auto;
+    text-align: center;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.footer .footer-content .formulario-content #formulario .send{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+    
+}
+
+.footer .footer-content .formulario-content #formulario .send button{
+    width: 100px;
+    height: 50px;
+    background: var(--red);
+    border-radius: 45px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.footer .footer-content .formulario-content #formulario .send button:hover{
+    background: var(--blue);
+}
+
+.footer .footer-content .footer-text{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background:rgba(0,0,0,0.8);
+    border-top: 5px solid #fff;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .footer-content .footer-text p{
+    color:red;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    margin-top:0px;
+}
+
+
+/**footer**/
+
+/**Media Query**/
+
+@media only screen and (max-width:900px){
+    .btn-menu > .fa-bars{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 28px;
+        cursor: pointer;
+    }
+    .btn-menu > .fa-bars:hover{color:var(--red) ;}
+    .btn-menu > .fa-times{color: var(--red) ;}
+    .menu .list-container{
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: #fff;
+    }
+    .menu .list-container .list{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-top: 5px solid var(--red);
+    }
+
+    .menu .list-container .list li{
+        width: 90%;
+        margin: 10px 0px;
+        border-bottom: 1px solid var(--red);
+        text-align: center;
+    }
+
+    .menu .list-container .list li a{
+        font-size: 20px;
+    }
+
+    .menu .list-container .list li a.activo{
+        background: none;
+        color: var(--red);
+    }
+    
+    .menu .list-container .list li a:hover{
+        background: none;
+        color: var(--red)
+
+    }
+}
+
+@media only screen and (max-width: 773px) {
+    /**img- header**/
+    .img-header .welcome h1{
+        font-size: 40px;
+   }
+
+   .img-header .welcome > button{
+
+        width: 130px;
+        font-size: 20px;
+        
+   }
+/**acerca**/
+
+.acerca-de .info-container .about-gallery{
+
+    flex-direction: column;
+}
+.acerca-de .info-container .about-gallery img{
+    width: 100%;
+}
+
+/**Referencias y diseños**/
+.our-projects .container-project .project-img img{
+
+    width: 80%;
+    margin-bottom: 30px;
+}
+    }
+
+
+@media only screen and (max-width: 520px) {
+    /**img- header**/
+ 
+
+   .img-header .welcome h1{
+    font-size: 30px;
+}
+
+.img-header .welcome hr{
+    width: 100px;
+}
+
+.img-header .welcome p{
+
+    font-size: 17px;
+}
+}
+
+.img-header .welcome > button {
+    
+     width:100px;
+     font-size: 17px;
+}
+
+
+    @media only screen and (max-width: 890px) {
+
+        .testimonio .box-testimonio .card-testimonio .card-img img{
+            width: 200px;
+            height: 200px;
+
+     
+        }
+        .testimonio .box-testimonio .card-testimonio{
+            width:100%
+        }
+
+        .testimonio .box-testimonio .card-testimonio .testimonio-text h4{
+            font-size: 25px;
+        }
+
+        .testimonio .box-testimonio .card-testimonio .testimonio-text p{
+            font-size: 17px;
+            line-height: 35px;
+        }
+
+    } 
+
+    @media only screen and (max-width: 900px) {
+
+        .footer .formulario-content{
+            width: 95%;
+            padding: 20px;
+        } 
+
+        .footer .formulario-content #formulario input{
+            width: 100%;
+        }
+
+        .footer .formulario-content #formulario textarea{
+            width: 100%;
+        }
+
+    }
+    
+
